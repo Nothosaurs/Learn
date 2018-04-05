@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css3动画</title>
+		<style type="text/css">
+			/*@keyframes 规定动画*/
+			@keyframes myfirst {
+				0% {
+					background: red;
+					transform: translate(0px,0px);
+				}
+				25% {
+					background: yellow;
+					transform: translate(200px,0px);
+				}
+				50% {
+					background: blue;
+					transform: translate(200px,200px);
+				}
+				75% {
+					background: green;
+					transform: translate(0px,200px);
+				}
+				100% {
+					background: red;
+					transform: translate(0px 0px);
+				}
+			}
+			
+			@-webkit-keyframes myfirst {
+				0% {
+					background: red;
+					transform: translate(0px,0px);
+				}
+				25% {
+					background: yellow;
+					transform: translate(200px,0px);
+				}
+				50% {
+					background: blue;
+					transform: translate(200px,200px);
+				}
+				75% {
+					background: green;
+					transform: translate(0px,200px);
+				}
+				100% {
+					background: red;
+					transform: translate(0px 0px);
+				}
+			}
+			#demo1{
+				width: 100px;
+				height: 100px;
+				margin-bottom: 200px;
+				background: red;
+				animation: myfirst 5s linear 2s infinite alternate;
+				-webkit-animation: myfirst 5s linear 2s infinite alternate;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--该css动画只执行一次-->
+		<h3>demo1: 将myfist动画绑定到div元素上，时长5s</h3>
+		<div id="demo1"></div>
+		<p>animation-name:myfirst。规定动画名称</p>
+		<p>animation-duration: 5s。规定动画完成一个周期花费的时间，默认为0即没有动画</p>
+		<p>animation-timing-function:linear。规定动画的速度曲线，默认为ease</p>
+		<p>animation-delay: 2s。规定动画何时开始，默认0</p>
+		<p>animation-iteration-count:infinite。规定动画的播放次数，默认1，infinite为无限次</p>
+		<p>animation-direction:alternate。规定动画是否在下一个周期逆向播放，默认为normal</p>
+		<select name="">
+			<option value=""></option>
+		</select>
+	</body>
+
+</html>
