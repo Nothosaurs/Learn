@@ -1,2 +1,2 @@
-Creating a New branch is quick.
+Git 分支管理
 
